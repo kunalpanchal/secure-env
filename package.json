@@ -1,0 +1,34 @@
+{
+  "name": "secure-env",
+  "version": "1.0.0",
+  "description": "Use ENVs securely with encryption",
+  "main": "dist/lib/index.js",
+  "preferGlobal": true,
+  "bin": {
+    "secure-env": "dist/lib/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/lib/index.js",
+    "link": "npm run build && npm link"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunalpanchal/secure-env.git"
+  },
+  "keywords": [
+    "dotenv"
+  ],
+  "author": "kunalpanchal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kunalpanchal/secure-env/issues"
+  },
+  "homepage": "https://github.com/kunalpanchal/secure-env#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^2.6.2"
+  }
+}
