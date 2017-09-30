@@ -89,6 +89,16 @@ using this option.
 require('secure-env')({enc_algo:'aes256'});
 ```
 
+#### Secret
+
+Default: `aes192`
+
+Specify the secret Key which was used during encryption of raw file.Having a salt-hashed secret key is recommended.
+
+```js
+require('secure-env')({secret:'mySecretPassword'});
+```
+
 ## Parse rules 
 
 Refer https://github.com/motdotla/dotenv/blob/master/README.md#parse
