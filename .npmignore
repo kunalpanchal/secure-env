@@ -1,2 +1,4 @@
 test/
 .npmignore
+.babelrc
+lib/

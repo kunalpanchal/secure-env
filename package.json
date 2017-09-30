@@ -2,23 +2,25 @@
   "name": "secure-env",
   "version": "1.0.0",
   "description": "Use ENVs securely with encryption",
-  "main": "dist/lib/index.js",
+  "main": "dist/es5/lib/index.js",
   "preferGlobal": true,
   "bin": {
-    "secure-env": "dist/lib/cli.js"
+    "secure-env": "dist/es5/lib/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "start": "npm run build && node dist/lib/index.js",
-    "link": "npm run build && npm link"
+    "prebuild-es5": "rimraf dist/es5",
+    "build-es5": "babel ./ --out-dir dist/es5/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./npm-debug.log,./LICENSE,./README.md --copy-files"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kunalpanchal/secure-env.git"
   },
   "keywords": [
-    "dotenv"
+    "dotenv",
+    "secure-env",
+    "encrypt-env",
+    "decrypt-env"
   ],
   "author": "kunalpanchal",
   "license": "ISC",
@@ -30,5 +32,8 @@
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
   }
 }
