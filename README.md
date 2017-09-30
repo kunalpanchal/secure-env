@@ -23,7 +23,7 @@ DB_PASS=tiger
 ### Encrypt .env
 
 ```bash
-$ secure-env .env --secret mySecretPassword
+$ secure-env .env -s mySecretPassword
 ```
 A new encrypted file `.env.enc` will be created in your project root directory.You can delete the `.env` file after this,to prevent stealing.
  
