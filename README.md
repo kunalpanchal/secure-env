@@ -120,6 +120,12 @@ Source-env uses these open source projects to work properly:
 
 * [Minimist][minimist] - Argument parser without all the fanciful decoration.
 
+## Acknowledgements
+
+Source-env is inspired from and also uses code references from these open source projects:
+
+* [Dotenv][dotenv]
 
 [npm-malicious-packages]: <https://iamakulov.com/notes/npm-malicious-packages/>
 [minimist]: <https://www.npmjs.com/package/minimist>
+[dotenv]: <https://github.com/motdotla/dotenv/>
