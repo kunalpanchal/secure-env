@@ -27,7 +27,7 @@ $ secure-env .env -s mySecretPassword
 ```
 A new encrypted file `.env.enc` will be created in your project root directory.You can delete the `.env` file after this,to prevent stealing.
  
- ### Decrypt .env.enc
+### Decrypt .env.enc
  
 As early as possible in your application, require and configure dotenv.
 
