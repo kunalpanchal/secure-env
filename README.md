@@ -2,12 +2,6 @@
 
 Secure-env is a module that loads environment variables from a `.env.enc` file.A encryption tool that would helps you prevent attacks from [npm-malicious-packages][npm-malicious-packages].
 
-## Install
-
-```bash
-$ npm install secure-env -g
-```
-
 ## Usage
 
 Create a `.env` file in the root directory of your project. Add
@@ -23,9 +17,23 @@ DB_PASS=tiger
 ### Encrypt .env
 
 ```bash
+$ npm install -g secure-env
 $ secure-env .env -s mySecretPassword
 ```
-A new encrypted file `.env.enc` will be created in your project root directory.You can delete the `.env` file after this,to prevent stealing.
+Alternatively if you want this installed locally run the command as follows:
+
+```bash
+$ ./node_modules/secure-env/dist/es5/lib/cli.js .env -s mySecretPassword
+```
+
+If you are running NPM > v5.2. You can use `npx`:
+
+```bash
+$ npx secure-env .env -s mySecretPassword
+```
+
+A new encrypted file `.env.enc` will be created in your project root directory.You can delete the `.env` file after this,to prevent stealing. 
+
  
 ### Decrypt .env.enc
  
