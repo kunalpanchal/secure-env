@@ -1,3 +1,12 @@
+[![npm version](https://badge.fury.io/js/secure-env.svg)](https://badge.fury.io/js/secure-env)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kunalpanchal/secure-env/graphs/commit-activity)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/kunalpanchal/secure-env/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://gitHub.com/kunalpanchal/secure-env/releases/)
+[![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://gitHub.com/kunalpanchal/secure-env/releases/)
+[![GitHub stars](https://img.shields.io/github/stars/Naereen/StrapDown.js.svg?style=social&label=Star&maxAge=2592000)](https://gitHub.com/kunalpanchal/secure-env/stargazers/)
+
+
 # secure-env
 
 Secure-env is a module that loads environment variables from a `.env.enc` file.A encryption tool that would helps you prevent attacks from [npm-malicious-packages][npm-malicious-packages].
