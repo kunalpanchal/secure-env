@@ -98,7 +98,7 @@ require('secure-env')({path:'/custom/path/to/your/env/vars'});
 
 #### Decryption Algorithm
 
-Default: `aes192`
+Default: `aes256`
 
 You may specify the encryption algorithm for your file containing environment variables
 using this option.
