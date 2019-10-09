@@ -79,7 +79,8 @@ $ secure-env --option <VALUE> <file-path-which-is-to-be-encrypted>
 | ------ | ------ | ------ |
 | --secret <secretKey> | Specify the secret Key which would be later used to decrypt the file. | `mySecret` |
 | --out <file-path> | The encrypted file path that would be created. | `env.enc` |
-| --algo <algoName> | The encryption algorithm that is to be used to encrypt the env file. | `aes192` |
+| --algo <algoName> | The encryption algorithm that is to be used to encrypt the env file. | `aes256` |
+| --decrypt | prints the decrypted text to stdout
 
 
 ### Decryption
