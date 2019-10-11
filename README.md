@@ -79,7 +79,8 @@ $ secure-env --option <VALUE> <file-path-which-is-to-be-encrypted>
 | ------ | ------ | ------ |
 | --secret <secretKey> | Specify the secret Key which would be later used to decrypt the file. | `mySecret` |
 | --out <file-path> | The encrypted file path that would be created. | `env.enc` |
-| --algo <algoName> | The encryption algorithm that is to be used to encrypt the env file. | `aes192` |
+| --algo <algoName> | The encryption algorithm that is to be used to encrypt the env file. | `aes256` |
+| --decrypt | prints the decrypted text to stdout
 
 
 ### Decryption
@@ -97,7 +98,7 @@ require('secure-env')({path:'/custom/path/to/your/env/vars'});
 
 #### Decryption Algorithm
 
-Default: `aes192`
+Default: `aes256`
 
 You may specify the encryption algorithm for your file containing environment variables
 using this option.
@@ -146,6 +147,13 @@ See [LICENSE](LICENSE)
 Source-env uses these open source projects to work properly:
 
 * [Minimist][minimist] - Argument parser without all the fanciful decoration.
+
+## Contributors
+
+<a href="https://github.com/kunalpanchal/secure-env/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=kunalpanchal/secure-env" />
+</a>
+
 
 ## Acknowledgements
 
