@@ -32,6 +32,7 @@
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
+    "chai": "^4.2.0",
     "mocha": "^8.1.1",
     "rimraf": "^3.0.0"
   },
