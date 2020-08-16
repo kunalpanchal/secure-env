@@ -3,13 +3,12 @@ const cryptography = require("../lib/cryptography");
 const PASS = "password";
 const path = require("path");
 const expect = require("chai").expect;
-const env = require("../lib/index");
 
-describe("index", ()=> {
-    it("should load up env vars", async()=> {
+describe("cryptography", ()=> {
+    it("should encrypt and decrypt files", async()=> {
 
-        const rawFile = path.join(__dirname , "./index.env")
-        const encryptedFile = path.join(__dirname , "./index.env.enc")
+        const rawFile = path.join(__dirname , "./test.env")
+        const encryptedFile = path.join(__dirname , "./test.env.enc")
         await cryptography.encrypt({
             secret: PASS,
             inputFile: rawFile,
@@ -18,12 +17,13 @@ describe("index", ()=> {
             ivLength: 16
         })
 
-        const vars = env({
+        const decrypted = cryptography.decrypt({
             secret: PASS,
             encryptedFile: encryptedFile,
             encryptionAlgo: "aes256",
             ivLength: 16
         })
-        expect(vars).to.deep.equal({poo:"par", two: "2"})
+
+        expect(decrypted).equal("foo=bar")
     })
 })
