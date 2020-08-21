@@ -1,11 +1,11 @@
 {
   "name": "secure-env-async",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use ENVs securely with encryption",
-  "main": "dist/es5/lib/index.js",
+  "main": "lib/index.js",
   "preferGlobal": true,
   "bin": {
-    "secure-env": "dist/es5/lib/cli.js"
+    "secure-env-async": "lib/cli.js"
   },
   "scripts": {
     "test": "",
@@ -19,6 +19,7 @@
   "keywords": [
     "dotenv",
     "secure-env",
+    "secure-env-enc",
     "encrypt-env",
     "decrypt-env"
   ],

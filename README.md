@@ -144,16 +144,11 @@ Source-env uses these open source projects to work properly:
 
 * [Minimist][minimist] - Argument parser without all the fanciful decoration.
 
-## Contributors
-
-<a href="https://github.com/kunalpanchal/secure-env/graphs/contributors">
-  <img src="https://contributors-img.firebaseapp.com/image?repo=kunalpanchal/secure-env" />
-</a>
-
-
 ## Acknowledgements
 
-Source-env is inspired from and also uses code references from these open source projects:
+Source-env-async is stolen directly from secure-env to fix bugs and add features i wanted
+
+it apparently also takes inspiration from:
 
 * [Dotenv][dotenv]
 
