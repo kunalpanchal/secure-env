@@ -12,7 +12,7 @@ describe("index", ()=> {
         const encryptedFile = path.join(__dirname , "./index.env.enc")
         await cryptography.encrypt({
             secret: PASS,
-            inputFile: rawFile,
+            decryptedFile: rawFile,
             encryptedFile: encryptedFile,
             encryptionAlgo: "aes256",
             ivLength: 16

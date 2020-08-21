@@ -12,60 +12,57 @@ Secure-env is a module that loads environment variables from a `.env.enc` file.A
 
 ## Usage
 
-Create a `.env` file in the root directory of your project. Add
+```bash
+$ npm install secure-env
+```
+
+Create a `.env` file somewhere in your project. Add
 environment-specific variables on new lines in the form of `NAME=VALUE`.
 For example:
 
 ```dosini
-DB_HOST=localhost:27017
-DB_USER=scott
-DB_PASS=tiger
+KEY=VALUE
+NUMBER=2 #numbers are parsed as strings
 ```
 
 ### Encrypt .env
 
 ```bash
-$ npm install -g secure-env
+$ npm install -g secure-env 
 $ secure-env .env -s mySecretPassword
 ```
 Alternatively if you want this installed locally run the command as follows:
 
 ```bash
-$ ./node_modules/secure-env/dist/es5/lib/cli.js .env -s mySecretPassword
+$ ./node_modules/secure-env/dist/es5/lib/cli.js .env -s mySecretPassword -o .env.enc
 ```
 
 If you are running NPM > v5.2. You can use `npx`:
 
 ```bash
-$ npx secure-env .env -s mySecretPassword
+$ npx secure-env .env -s mySecretPassword -o .env.enc
 ```
 
-A new encrypted file `.env.enc` will be created in your project root directory.You can delete the `.env` file after this,to prevent stealing. 
+A new encrypted file `.env.enc` will be created in your project root directory. You can delete the `.env` file now
 
  
-### Decrypt .env.enc
+### Loading env in app
  
 As early as possible in your application, require and configure dotenv.
 
-```javascript
+```js
 let secureEnv = require('secure-env');
-global.env = secureEnv({secret:'mySecretPassword'});
+const envObject = secureEnv({secret:'mySecretPassword', encryptedFile: 'pathToEncryptedFile' });
 
 ```
+`envObject` now has all the parsed variables assigned as keys and values.  
 
-That's it.
+### Decrypting env to terminal
+🚨This procedure can completely undo the entire security of this module. Make sure you do not commit the decrypted file!🚨️
 
-`global.env` now has the keys and values you defined in your `.env` file.
-
-```javascript
-var db = require('db')
-db.connect({
-  host: global.env.DB_HOST,
-  username: global.env.DB_USER,
-  password: global.env.DB_PASS
-})
+```shell script
+npx secure-env -d -e "encryptedFilePath" 
 ```
-
 ## Options
 
 ### Encryption
@@ -77,7 +74,7 @@ $ secure-env --option <VALUE> <file-path-which-is-to-be-encrypted>
 | Option | What does it do | Defaults |
 | ------ | ------ | ------ |
 | --secret <secretKey> | Specify the secret Key which would be later used to decrypt the file. | `mySecret` |
-| --out <file-path> | The encrypted file path that would be created. | `env.enc` |
+| --encryptedFile <file-path> | The encrypted file path that would be created. | `env.enc` |
 | --algo <algoName> | The encryption algorithm that is to be used to encrypt the env file. | `aes256` |
 | --decrypt | prints the decrypted text to stdout
 
