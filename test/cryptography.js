@@ -17,7 +17,7 @@ describe("cryptography", () => {
             ivLength: 16
         })
 
-        const decrypted = cryptography.decrypt({
+        const decrypted = await cryptography.decrypt({
             secret: PASS,
             encryptedFile: encryptedFile,
             encryptionAlgo: "aes256",

@@ -18,7 +18,7 @@ describe("index", ()=> {
             ivLength: 16
         })
 
-        const vars = env({
+        const vars = await env({
             secret: PASS,
             encryptedFile: encryptedFile,
             encryptionAlgo: "aes256",
