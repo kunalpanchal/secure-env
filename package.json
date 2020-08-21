@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Use ENVs securely with encryption",
   "main": "dist/es5/lib/index.js",
-  "files": ["dist/es5/"],
   "preferGlobal": true,
   "bin": {
     "secure-env": "dist/es5/lib/cli.js"
