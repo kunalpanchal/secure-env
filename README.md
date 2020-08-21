@@ -6,7 +6,7 @@
 [![Github all releases](https://img.shields.io/github/downloads/Naereen/StrapDown.js/total.svg)](https://gitHub.com/kunalpanchal/secure-env/releases/)
 
 
-# secure-env
+# secure-env-async
 
 Secure-env is a module that loads environment variables from a `.env.enc` file.A encryption tool that would helps you prevent attacks from [npm-malicious-packages][npm-malicious-packages].
 

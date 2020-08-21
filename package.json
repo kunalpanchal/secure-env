@@ -1,20 +1,21 @@
 {
-  "name": "secure-env",
-  "version": "1.2.0",
+  "name": "secure-env-async",
+  "version": "1.0.0",
   "description": "Use ENVs securely with encryption",
   "main": "dist/es5/lib/index.js",
+  "files": ["dist/es5/"],
   "preferGlobal": true,
   "bin": {
     "secure-env": "dist/es5/lib/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "",
     "prebuild": "rimraf dist/es5",
-    "build": "babel ./ --out-dir dist/es5/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./npm-debug.log,./LICENSE,./README.md --copy-files"
+    "build": "babel ./ --out-dir dist/es5/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./npm-debug.log,./LICENSE,./README.md --copy-files --no-copy-ignored"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kunalpanchal/secure-env.git"
+    "url": "git+https://github.com/1mike12/secure-env.git"
   },
   "keywords": [
     "dotenv",
@@ -22,21 +23,21 @@
     "encrypt-env",
     "decrypt-env"
   ],
-  "author": "kunalpanchal",
+  "author": "1mike12",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kunalpanchal/secure-env/issues"
+    "url": "https://github.com/1mike12/secure-env/issues"
   },
-  "homepage": "https://github.com/kunalpanchal/secure-env#readme",
+  "homepage": "https://github.com/1mike12/secure-env#readme",
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
     "chai": "^4.2.0",
     "mocha": "^8.1.1",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.5"
   }
 }
