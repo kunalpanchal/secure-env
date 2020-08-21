@@ -13,7 +13,7 @@ Secure-env is a module that loads environment variables from a `.env.enc` file.A
 ## Usage
 
 ```bash
-$ npm install secure-env
+$ npm install secure-env-async
 ```
 
 Create a `.env` file somewhere in your project. Add
@@ -34,7 +34,7 @@ $ secure-env .env -s mySecretPassword
 Alternatively if you want this installed locally run the command as follows:
 
 ```bash
-$ ./node_modules/secure-env/dist/es5/lib/cli.js .env -s mySecretPassword -o .env.enc
+$ ./node_modules/secure-env-async/lib/cli.js .env -s mySecretPassword -o .env.enc
 ```
 
 If you are running NPM > v5.2. You can use `npx`:
@@ -52,7 +52,7 @@ As early as possible in your application, require and configure dotenv.
 
 ```js
 let secureEnv = require('secure-env');
-const envObject = secureEnv({secret:'mySecretPassword', encryptedFile: 'pathToEncryptedFile' });
+const envObject = await secureEnv({secret:'mySecretPassword', encryptedFile: 'pathToEncryptedFile' });
 
 ```
 `envObject` now has all the parsed variables assigned as keys and values.  
@@ -89,7 +89,7 @@ You can specify a custom path if your file containing environment variables is
 named or located differently.
 
 ```js
-require('secure-env')({path:'/custom/path/to/your/env/vars'});
+await require('secure-env')({path:'/custom/path/to/your/env/vars'});
 ```
 
 #### Decryption Algorithm
@@ -100,7 +100,7 @@ You may specify the encryption algorithm for your file containing environment va
 using this option.
 
 ```js
-require('secure-env')({enc_algo:'aes256'});
+await require('secure-env')({enc_algo:'aes256'});
 ```
 
 #### Secret
@@ -110,7 +110,7 @@ Default: `mySecret`
 Specify the secret Key which was used during encryption of raw file.Having a salt-hashed secret key is recommended.
 
 ```js
-require('secure-env')({secret:'mySecretPassword'});
+await require('secure-env')({secret:'mySecretPassword'});
 ```
 
 ## Parse rules 

@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="241bf5f3-7669-43fe-95b3-6950c12f1b0f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +169,7 @@
       <workItem from="1597583542948" duration="4771000" />
       <workItem from="1598026045113" duration="4880000" />
       <workItem from="1598032080848" duration="495000" />
+      <workItem from="1598032626991" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="change var names to make sense">
       <created>1597532979964</created>
@@ -268,7 +269,35 @@
       <option name="project" value="LOCAL" />
       <updated>1598031935315</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="directly link lib">
+      <created>1598032787513</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1598032787513</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ignore idea">
+      <created>1598032886914</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1598032886914</updated>
+    </task>
+    <task id="LOCAL-00017" summary="ignore idea">
+      <created>1598032904078</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598032904078</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ignore idea">
+      <created>1598032917535</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1598032917535</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +324,9 @@
     <MESSAGE value="cli test working" />
     <MESSAGE value="make everything async" />
     <MESSAGE value="cleanup for publish" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup for publish" />
+    <MESSAGE value="directly link lib" />
+    <MESSAGE value="ignore idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignore idea" />
   </component>
   <component name="WindowStateProjectService">
     <state x="650" y="325" width="586" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597588718138">
@@ -308,11 +339,11 @@
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1050/0.0.1920.1050/1920.0.1080.1890@0.0.1920.1050" timestamp="1597588148411" />
     <state x="690" y="276" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.977/1920.23.1080.1897@0.23.1920.977" timestamp="1598027515777" />
-    <state x="585" y="110" key="CommitChangelistDialog2" timestamp="1598031935190">
+    <state x="585" y="110" key="CommitChangelistDialog2" timestamp="1598032917400">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="585" y="93" key="CommitChangelistDialog2/-1920.0.1920.1050/0.0.1920.1050/1920.0.1080.1890@0.0.1920.1050" timestamp="1597589350732" />
-    <state x="585" y="110" key="CommitChangelistDialog2/0.23.1920.977/1920.23.1080.1897@0.23.1920.977" timestamp="1598031935190" />
+    <state x="585" y="110" key="CommitChangelistDialog2/0.23.1920.977/1920.23.1080.1897@0.23.1920.977" timestamp="1598032917400" />
     <state width="407" height="466" key="DebuggerActiveHint" timestamp="1597587330162">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
