@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "noEmit": false,
+    "strict": true,
+    "alwaysStrict": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "include": [
+    "./lib/**/*"
+  ]
+}

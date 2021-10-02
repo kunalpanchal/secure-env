@@ -8,7 +8,19 @@
 
 # secure-env
 
-Secure-env is a module that loads environment variables from a `.env.enc` file.A encryption tool that would helps you prevent attacks from [npm-malicious-packages][npm-malicious-packages].
+Secure-env is a module that loads environment variables from a `.env.enc` file. An encryption tool that would helps you prevent attacks from [npm-malicious-packages][npm-malicious-packages].
+
+## Table Of Content
+
+[Usage](https://github.com/kunalpanchal/secure-env#usage)
+- [Encrypt .env](https://github.com/kunalpanchal/secure-env#encrypt-env)
+- [Decrypt .env.enc](https://github.com/kunalpanchal/secure-env#decrypt-envenc)
+
+[Options](https://github.com/kunalpanchal/secure-env#options)
+- [Encryption](https://github.com/kunalpanchal/secure-env#encryption)
+- [Decryption](https://github.com/kunalpanchal/secure-env#decryption)
+
+[Typescript](https://github.com/kunalpanchal/secure-env#typescript)
 
 ## Usage
 
@@ -31,7 +43,7 @@ $ secure-env .env -s mySecretPassword
 Alternatively if you want this installed locally run the command as follows:
 
 ```bash
-$ ./node_modules/secure-env/dist/es5/lib/cli.js .env -s mySecretPassword
+$ ./node_modules/secure-env/dist/cli.js .env -s mySecretPassword
 ```
 
 If you are running NPM > v5.2. You can use `npx`:
@@ -49,8 +61,7 @@ As early as possible in your application, require and configure dotenv.
 
 ```javascript
 let secureEnv = require('secure-env');
-global.env = secureEnv({secret:'mySecretPassword'});
-
+global.env = secureEnv({ secret:'mySecretPassword' });
 ```
 
 That's it.
@@ -92,7 +103,7 @@ You can specify a custom path if your file containing environment variables is
 named or located differently.
 
 ```js
-require('secure-env')({path:'/custom/path/to/your/env/vars'});
+require('secure-env')({ file:'/custom/path/to/your/env/vars' });
 ```
 
 #### Decryption Algorithm
@@ -103,17 +114,36 @@ You may specify the encryption algorithm for your file containing environment va
 using this option.
 
 ```js
-require('secure-env')({enc_algo:'aes256'});
+require('secure-env')({ decryptionAlgo:'aes256' });
 ```
 
 #### Secret
 
-Default: `mySecret`
+**Required**
 
 Specify the secret Key which was used during encryption of raw file.Having a salt-hashed secret key is recommended.
 
 ```js
-require('secure-env')({secret:'mySecretPassword'});
+require('secure-env')({ secret: 'mySecretPassword' });
+```
+
+## Typescript
+
+Now a days, it's common to use typescript in a project.\
+With `secure-env` you can type your env by using generics.
+
+**It's required for your interface to extend `IObject`**
+
+```ts
+import SecureEnv, { IObject } from "secure-env"
+
+interface IEnv extends IObject{
+  DB_HOST: string;
+  DB_USER: string;
+  DB_PASS: string;
+}
+
+const env = SecureEnv<IEnv>(your_options);
 ```
 
 ## Parse rules 

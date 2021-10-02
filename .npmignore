@@ -2,3 +2,9 @@ test/
 .npmignore
 .babelrc
 lib/
+node_modules
+tsconfig.json
+.eslintrc.json
+.eslintignore
+.gitignore
+.vscode

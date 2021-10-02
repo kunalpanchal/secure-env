@@ -1,38 +1,48 @@
 {
   "name": "secure-env",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Use ENVs securely with encryption",
-  "main": "dist/es5/lib/index.js",
-  "preferGlobal": true,
+  "license": "MIT",
+  "author": "kunalpanchal",
+  "contributors": [
+    {
+      "name": "yoyo1234",
+      "email": "johann@buscail.eu",
+      "url": "https://github.com/johannb75"
+    }
+  ],
+  "main": "dist/index.js",
   "bin": {
-    "secure-env": "dist/es5/lib/cli.js"
+    "secure-env": "dist/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rimraf dist/es5",
-    "build": "babel ./ --out-dir dist/es5/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./npm-debug.log,./LICENSE,./README.md --copy-files"
+    "test": "cd ./test && ts-node ./index.ts",
+    "test:secure-env": "cd ./test && ../dist/cli.js -s mySecret",
+    "watch-build": "tsc --watch",
+    "build": "tsc",
+    "recreate-build": "npx rimraf ./dist && yarn build",
+    "prepublish": "yarn recreate-build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kunalpanchal/secure-env.git"
   },
+  "bugs": {
+    "url": "https://github.com/kunalpanchal/secure-env/issues"
+  },
+  "homepage": "https://github.com/kunalpanchal/secure-env#readme",
   "keywords": [
     "dotenv",
     "secure-env",
     "encrypt-env",
     "decrypt-env"
   ],
-  "author": "kunalpanchal",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kunalpanchal/secure-env/issues"
-  },
-  "homepage": "https://github.com/kunalpanchal/secure-env#readme",
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "rimraf": "^3.0.0"
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^16.10.2",
+    "rimraf": "^3.0.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   },
   "dependencies": {
     "minimist": "^1.2.0"
