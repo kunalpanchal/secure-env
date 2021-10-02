@@ -8,7 +8,7 @@
 
 # secure-env
 
-Secure-env is a module that loads environment variables from a `.env.enc` file.A encryption tool that would helps you prevent attacks from [npm-malicious-packages][npm-malicious-packages].
+Secure-env is a module that loads environment variables from a `.env.enc` file. An encryption tool that would helps you prevent attacks from [npm-malicious-packages][npm-malicious-packages].
 
 ## Table Of Content
 
