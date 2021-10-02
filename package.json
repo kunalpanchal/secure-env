@@ -1,13 +1,23 @@
 {
-  "name": "secure-env-fork",
-  "version": "1.2.3",
+  "name": "secure-env",
+  "version": "1.2.1",
   "description": "Use ENVs securely with encryption",
+  "license": "MIT",
+  "author": "kunalpanchal",
+  "contributors": [
+    {
+      "name": "yoyo1234",
+      "email": "johann@buscail.eu",
+      "url": "https://github.com/johannb75"
+    }
+  ],
   "main": "dist/index.js",
   "bin": {
     "secure-env": "dist/cli.js"
   },
   "scripts": {
-    "test": "cd ./test && npm run test",
+    "test": "cd ./test && ts-node ./index.ts",
+    "test:secure-env": "cd ./test && ../dist/cli.js -s mySecret",
     "watch-build": "tsc --watch",
     "build": "tsc",
     "recreate-build": "npx rimraf ./dist && yarn build",
@@ -15,24 +25,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johannb75/secure-env.git"
+    "url": "git+https://github.com/kunalpanchal/secure-env.git"
   },
+  "bugs": {
+    "url": "https://github.com/kunalpanchal/secure-env/issues"
+  },
+  "homepage": "https://github.com/kunalpanchal/secure-env#readme",
   "keywords": [
     "dotenv",
     "secure-env",
     "encrypt-env",
     "decrypt-env"
   ],
-  "author": "yoyo1234",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johannb75/secure-env/issues"
-  },
-  "homepage": "https://github.com/johannb75/secure-env#readme",
   "devDependencies": {
     "@types/minimist": "^1.2.2",
     "@types/node": "^16.10.2",
     "rimraf": "^3.0.0",
+    "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
   "dependencies": {
