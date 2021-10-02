@@ -43,7 +43,7 @@ $ secure-env .env -s mySecretPassword
 Alternatively if you want this installed locally run the command as follows:
 
 ```bash
-$ ./node_modules/secure-env/dist/es5/lib/cli.js .env -s mySecretPassword
+$ ./node_modules/secure-env/dist/cli.js .env -s mySecretPassword
 ```
 
 If you are running NPM > v5.2. You can use `npx`:
@@ -62,7 +62,6 @@ As early as possible in your application, require and configure dotenv.
 ```javascript
 let secureEnv = require('secure-env');
 global.env = secureEnv({ secret:'mySecretPassword' });
-
 ```
 
 That's it.
