@@ -92,7 +92,7 @@ You can specify a custom path if your file containing environment variables is
 named or located differently.
 
 ```js
-require('secure-env')({path:'/custom/path/to/your/env/vars'});
+require('secure-env')({ file:'/custom/path/to/your/env/vars' });
 ```
 
 #### Decryption Algorithm
@@ -103,17 +103,17 @@ You may specify the encryption algorithm for your file containing environment va
 using this option.
 
 ```js
-require('secure-env')({enc_algo:'aes256'});
+require('secure-env')({ decryptionAlgo:'aes256' });
 ```
 
 #### Secret
 
-Default: `mySecret`
+**Required**
 
 Specify the secret Key which was used during encryption of raw file.Having a salt-hashed secret key is recommended.
 
 ```js
-require('secure-env')({secret:'mySecretPassword'});
+require('secure-env')({ secret: 'mySecretPassword' });
 ```
 
 ## Parse rules 
