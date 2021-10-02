@@ -2,7 +2,7 @@ import { decrypt, IDecryptOptions } from './cryptography'
 import log, { logTypes } from './utils/log'
 import parser, { IObject } from './parser'
 
-interface IOptions extends IDecryptOptions { }
+interface IOptions extends Omit<IDecryptOptions, "ivLength"> { }
 
 const SecureEnv = <T extends IObject>(options: IOptions): T | undefined => {
   try {
