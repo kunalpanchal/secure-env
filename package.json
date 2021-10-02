@@ -1,5 +1,5 @@
 {
-  "name": "secure-env",
+  "name": "secure-env-fork",
   "version": "1.2.0",
   "description": "Use ENVs securely with encryption",
   "main": "dist/index.js",
@@ -7,7 +7,7 @@
     "secure-env": "dist/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cd ./test && npm run test",
     "watch-build": "tsc --watch",
     "build": "tsc",
     "recreate-build": "npx rimraf ./dist && yarn build",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kunalpanchal/secure-env.git"
+    "url": "git+https://github.com/johannb75/secure-env.git"
   },
   "keywords": [
     "dotenv",
@@ -23,12 +23,12 @@
     "encrypt-env",
     "decrypt-env"
   ],
-  "author": "kunalpanchal",
+  "author": "yoyo1234",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kunalpanchal/secure-env/issues"
+    "url": "https://github.com/johannb75/secure-env/issues"
   },
-  "homepage": "https://github.com/kunalpanchal/secure-env#readme",
+  "homepage": "https://github.com/johannb75/secure-env#readme",
   "devDependencies": {
     "@types/minimist": "^1.2.2",
     "@types/node": "^16.10.2",

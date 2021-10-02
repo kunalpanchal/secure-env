@@ -1,14 +1,12 @@
-import SecureEnv, { IObject } from "../dist";
+import SecureEnv, { IObject } from "secure-env-fork";
 
-interface IEnv extends IObject{
-    val1: string;
-    val2: string;
+interface IEnv extends IObject {
+    PASSWORD: string;
 }
 
-const test = SecureEnv<IEnv>({
+const env = SecureEnv<IEnv>({
     secret: "mySecret",
-    decryptionAlgo: "aes-128-gcm",
-    file: ".env",
-    ivLength: 24
-})
+});
 
+if (env?.PASSWORD)
+    console.log("✅ Success, password exists")
