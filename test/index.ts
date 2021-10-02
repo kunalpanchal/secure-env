@@ -1,4 +1,4 @@
-import SecureEnv, { IObject } from "secure-env-fork";
+import SecureEnv, { IObject } from "../dist";
 
 interface IEnv extends IObject {
     PASSWORD: string;
