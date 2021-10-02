@@ -61,7 +61,7 @@ As early as possible in your application, require and configure dotenv.
 
 ```javascript
 let secureEnv = require('secure-env');
-global.env = secureEnv({secret:'mySecretPassword'});
+global.env = secureEnv({ secret:'mySecretPassword' });
 
 ```
 
@@ -133,6 +133,8 @@ require('secure-env')({ secret: 'mySecretPassword' });
 Now a days, it's common to use typescript in a project.\
 With `secure-env` you can type your env by using generics.
 
+**It's required for your interface to extend `IObject`**
+
 ```ts
 import SecureEnv, { IObject } from "secure-env"
 
@@ -144,8 +146,6 @@ interface IEnv extends IObject{
 
 const env = SecureEnv<IEnv>(your_options);
 ```
-
-It's required for your interface to extend `IObject`
 
 ## Parse rules 
 
