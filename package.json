@@ -29,10 +29,10 @@
   },
   "homepage": "https://github.com/kunalpanchal/secure-env#readme",
   "devDependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "rimraf": "^3.0.0"
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "rimraf": "^5.0.5"
   },
   "dependencies": {
     "minimist": "^1.2.0"
